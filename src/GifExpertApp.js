@@ -1,32 +1,31 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import AddCategory from "./components/AddCategory";
+import GifGrid from "./components/GifGrid";
 
-const GifExpertApp = (props) => {
 
-  const [categories, setcategories] = useState([
+const GifExpertApp = (props) => {                   //Componente principal
+
+  const [categories, setCategories] = useState([    //Hook
     "Breaking Bad",
-    "Rick and Morty",
-    "BoJack Horsman",
   ]);
 
-  // const handleAdd = (e) =>{
-  //   setcategories([...categories, 'newCategorie']);
-  // }
-
   return (
-    <from>
+    <>
       <h2>GifExpertApp</h2>
-      <AddCategory/>
+      <AddCategory setCategories={setCategories}/>   
       <hr />
 
       <ol>
-        {categories.map(category => {
-          return <li key={category}> {category} </li>  
-        })
-      }
+        {
+          categories.map(category =>
+             (<GifGrid 
+                key={category}
+                category={category}
+              />))
+        }
       </ol>
-    </from>
+    </>
   );
 };
 
