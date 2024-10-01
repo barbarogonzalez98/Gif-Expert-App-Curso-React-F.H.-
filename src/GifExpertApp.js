@@ -8,6 +8,7 @@ const GifExpertApp = (props) => {                   //Componente principal
 
   const [categories, setCategories] = useState([    //Hook
     "Breaking Bad",
+    "Gandalf",
   ]);
 
   return (

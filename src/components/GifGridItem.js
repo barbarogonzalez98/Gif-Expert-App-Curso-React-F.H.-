@@ -6,7 +6,7 @@ const GifGridItem = ({id, title, url}) => {
     // const [item, setItem] = useState([]);
 
     // useEffect(() => {
-    //     getImg();
+    //     getImg(); 
     // }, [])
     
     // const getImg = (img) => {
@@ -16,7 +16,7 @@ const GifGridItem = ({id, title, url}) => {
     // console.log(id, title, url);
 
   return (
-    <div>
+    <div className='card animate__animated animate__pulse'>
         <img src={url} alt={title}/>
         <p>{title}</p>
     </div>
